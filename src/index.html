@@ -9,5 +9,16 @@
 </head>
 <body>
   <app-root></app-root>
+  <script src="assets/js/wow.js"></script>
+  <script src="assets/js/aos.js"></script> 
+  <script>
+    new WOW().init();
+    
+    AOS.init({
+ 	duration: 800,
+ 	easing: 'slide',
+ 	once: false
+    });
+  </script>
 </body>
 </html>
