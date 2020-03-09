@@ -14,6 +14,9 @@ import { TopProductComponent } from './website/top-product/top-product.component
 import { PopularProductComponent } from './website/popular-product/popular-product.component';
 import { NewProductComponent } from './website/new-product/new-product.component';
 import { ManyProductComponent } from './website/many-product/many-product.component';
+import { UserComponent } from './user/user/user.component';
+import { TransferComponent } from './user/transfer/transfer.component';
+import { UserHomeComponent } from './user/user-home/user-home.component';
 
 
 const routes: Routes = [
@@ -36,7 +39,15 @@ const routes: Routes = [
       ]} 
       
       ]
+
+
   },
+{
+  path : 'user', component :UserComponent, children: [
+    { path: '', component: UserHomeComponent} ,
+  ]
+},
+ 
 
 ];
 

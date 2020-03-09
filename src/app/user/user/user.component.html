@@ -1,0 +1,60 @@
+ <div class="user">
+    <div id="menu-overlay"></div>
+    <div id="menu-toggle" class="closed" data-title="Menu">
+        <i class="fa fa-bars"></i>
+        <i class="fa fa-times"></i>
+    </div>
+    <header id="main-header">
+      <nav id="sidenav">
+     
+        <ul id="main-nav">
+          <li class="active">
+            <a href="#">
+              <i class="fa fa-tachometer"></i>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-check-square-o"></i>
+              Tasks
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-user"></i>
+              Contacts
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-calendar"></i>
+              Calendar
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-life-ring"></i>
+              FAQs
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <form id="admin-search">
+        <input type="text" id="search-field" placeholder="Search"/>
+        <label for="search-field" id="search-label" title="Search"><i class="fa fa-search"></i></label>
+      </form>
+ 
+    </header>
+    <section id="content"> 
+        <router-outlet></router-outlet>
+ 
+ 
+ 
+    </section>
+    
+ 
+    <footer></footer> 
+ </div>
+
+ 

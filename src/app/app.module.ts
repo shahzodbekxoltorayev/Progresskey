@@ -17,7 +17,15 @@ import { NewProductComponent } from './website/new-product/new-product.component
 import { TopProductComponent } from './website/top-product/top-product.component';
 import { PopularProductComponent } from './website/popular-product/popular-product.component';
 import { AllProductComponent } from './website/all-product/all-product.component';
-import { ManyProductComponent } from './website/many-product/many-product.component'; 
+import { ManyProductComponent } from './website/many-product/many-product.component';
+import { UserComponent } from './user/user/user.component';
+import { UserTeamComponent } from './user/user-team/user-team.component';
+import { TransferComponent } from './user/transfer/transfer.component';
+import { UserSettingComponent } from './user/user-setting/user-setting.component';
+import { UserResultComponent } from './user/user-result/user-result.component';
+import { UserInformationComponent } from './user/user-information/user-information.component';
+import { UserNotesComponent } from './user/user-notes/user-notes.component';
+import { UserHomeComponent } from './user/user-home/user-home.component'; 
 
 @NgModule({
   declarations: [
@@ -36,7 +44,15 @@ import { ManyProductComponent } from './website/many-product/many-product.compon
     TopProductComponent,
     PopularProductComponent,
     AllProductComponent,
-    ManyProductComponent 
+    ManyProductComponent,
+    UserComponent,
+    UserTeamComponent,
+    TransferComponent,
+    UserSettingComponent,
+    UserResultComponent,
+    UserInformationComponent,
+    UserNotesComponent,
+    UserHomeComponent 
   ],
   imports: [
     BrowserModule,
