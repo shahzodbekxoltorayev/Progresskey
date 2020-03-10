@@ -45,11 +45,11 @@ router.post('/create/:token', upload.single('image'), async (req, res) =>{
       descriptionUz: body.descriptionUz,
       descriptionRu: body.descriptionRu,
       descriptionEn: body.descriptionEn,
-      image : file.filename,             
+      image : file.filename,
       categoryId: body.categoryId,
-      quantity: body.quantity,         
+      quantity: body.quantity,
       configuration: body.configuration,
-      price: body.price,         
+      price: body.price,
       rating: body.rating,
       date: new Date().toISOString().
                      replace(/T/, ' ').
@@ -95,7 +95,7 @@ router.get('/getForMagazine', async(request, response, next) => {
               prod = all[i];
               prod.image = url + '/images/' + all[i].image;
               product.push(prod);
-              if (i == 10) { break };
+              if (i == 8) { break };
       }
       response.status(200).json(product);
   }).catch( (err) =>{
@@ -229,6 +229,6 @@ router.patch('/updateQuanity/:id', async function(request, response) {
             response.status(400).json(err);
         })
     })
-}) 
+})
 
 module.exports = router;

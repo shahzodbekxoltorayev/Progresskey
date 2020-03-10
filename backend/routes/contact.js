@@ -89,20 +89,6 @@ router.delete('/deleteContact/:id/:token', async function(request, response, nex
 
 })
 
-router.post('/search', async(request, response) => {
-    var body = request.body;
-    console.log("Body ");
-    console.log(body);
-
-    var thisname = body.name;
-    console.log(thisname)
-
-    await Contact.find({ "name": thisname }).then(all => {
-        response.status(200).json(all);
-    }).catch(err => {
-        response.status(400).json({ message: "Error in search Phram" })
-    })
-})
 
 
 module.exports = router;

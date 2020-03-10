@@ -8,7 +8,7 @@ router.post('/', async function (request, response, next) {
     console.log("Post Admin");
    var body = request.body;
     let admin = {
-        warehouseId: body.warehouseId, 
+        warehouseId: body.warehouseId,
         login : body.login,
         password: await Admin.hashofPassword(body.password),
     }
@@ -73,7 +73,6 @@ router.get('/:id', async function(request, response) {
         }
     }
 })
-
 
 router.delete('/:id/:token', async function (request, response, next ){
     var data = {};
