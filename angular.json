@@ -32,7 +32,8 @@
               "src/assets/css/aos.css",
               "src/assets/css/fonts/icomoon/style.css",
               "src/assets/css/animation.css",
-              "src/assets/css/style.css"
+              "src/assets/css/style.css",
+              "src/assets/css/user.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js", 
