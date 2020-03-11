@@ -21,7 +21,7 @@ export class AuthService {
     login: string,
     image: File,
     password: string,
-    registerUserId: Array,
+    registerUserId: string[], // aslida array
     fullName: string,
     warehouseId: string
 ) {
@@ -60,7 +60,7 @@ export class AuthService {
     login: string,
     image: File,
     password: string,
-    registerUserId: Array,
+    registerUserId: string, // Array
     fullName: string,
     warehouseId: string
     ) {
