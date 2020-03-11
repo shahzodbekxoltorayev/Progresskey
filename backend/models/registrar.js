@@ -4,10 +4,11 @@ var jwt = require('jsonwebtoken');
 const registrarSchema = mongoose.Schema({
     filialId: {type: String},
     login: {type: String},
+    image: { type: String},
     password: {type: String},
     registerUserId: {type:  Array},
     fullName: {type: String},
-    generalBalance: {type: Number}, 
+    generalBalance: {type: Number},
     warehouseId: {type: String},
     date: {type: String}
 });

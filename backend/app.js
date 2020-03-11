@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 const adminRouter = require('./routes/admin');
 const userRouter = require('./routes/users');
-const registrarRouter = require('./routes/registrar'); 
+const registrarRouter = require('./routes/registrar');
 const wareHouseRouter = require('./routes/wareHouse');
 const userTypeRouter = require('./routes/userType');
 
@@ -13,7 +13,6 @@ const userTypeRouter = require('./routes/userType');
 const productRouter = require('./routes/products');
 const categoryRouter = require('./routes/category');
 const contactRouter = require('./routes/contact');
-const orderRouter = require('./routes/orders');
 const newsRouter = require('./routes/news');
 
 
@@ -68,13 +67,12 @@ app.use('/api/users/', userRouter);
 app.use('/api/registrar/', registrarRouter);
 app.use('/api/warehouse/', wareHouseRouter);
 app.use('/api/userType/', userTypeRouter);
+app.use('/api/news/', newsRouter);
 
 
 app.use('/api/products/', productRouter);
 app.use('/api/category/', categoryRouter);
 app.use('/api/contact/', contactRouter);
-app.use('/api/order/', orderRouter);
-app.use('/api/news/', newsRouter);
 
 // app.get('/*', (req, res) => {
 //     res.sendFile(path.join(__dirname, '../dist/online-pharmacy', 'index.html'))

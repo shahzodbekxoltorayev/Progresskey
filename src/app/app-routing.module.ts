@@ -21,7 +21,7 @@ import { UserHomeComponent } from './user/user-home/user-home.component';
 
 const routes: Routes = [
 
-  { 
+  {
     path : '', component : NavbarComponent, children: [
       { path: '', component: HomeComponent} ,
       {path: 'department-stores' , component:DepartmentStoresComponent},
@@ -36,8 +36,8 @@ const routes: Routes = [
         {path: 'top' , component: TopProductComponent} ,
         {path: 'popular' , component: PopularProductComponent} ,
         {path: 'many' , component: ManyProductComponent}
-      ]} 
-      
+      ]}
+
       ]
 
 
@@ -47,7 +47,7 @@ const routes: Routes = [
     { path: '', component: UserHomeComponent} ,
   ]
 },
- 
+
 
 ];
 

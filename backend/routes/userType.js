@@ -1,7 +1,7 @@
 const express = require('express');
 const UserType = require('../models/userType');
 const Registrar = require('../models/registrar');
-
+const Admin = require('../models/admin')
 const router = express.Router();
 
  //                                                               R e g i  s t r a t s i o n
@@ -73,18 +73,18 @@ router.delete('/:id/:token', async function(request, response, next) {
 
 })
 
-router.patch('/updateCategory/:id/:token' , async function(request, response, next) {
+router.patch('/:id/:token' , async function(request, response, next) {
     var id = request.params.id;
     var body = request.body;
 
     // body.logo = request.file.filename;
 
     var token = request.params.token;
-    var admin = await Registrar.find();
+    var admin = await Admin.find();
 
     var obj = Registrar.verifyOfUser(admin, token);
-    if (obj.isModerator) {
-        await Registrar.findByIdAndUpdate(id, { $set: body }, { new: true }).then((res) => {
+    if (obj.isAdmin) {
+        await UserType.findByIdAndUpdate(id, { $set: body }, { new: true }).then((res) => {
             if (res) {
                 response.status(200).json({ message: "Category Update Successfully" });
             } else {
@@ -95,7 +95,7 @@ router.patch('/updateCategory/:id/:token' , async function(request, response, ne
             response.status(400).json({ message: "This is Not Moderator" });
         })
     }
-}) 
+})
 
 
 module.exports = router;
