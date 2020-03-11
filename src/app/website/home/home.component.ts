@@ -11,18 +11,18 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    $(document).ready(function(){
- 
+    $(document).ready(function() {
+
       $('#testimonial-slider').owlCarousel({
-        loop:true,
-        margin:10,
-            pagination:true,
-          navigation:false,
-        responsiveClass:true,
-        autoPlay:true,
-        responsive:{
-            0:{
-                items:1,
+        loop: true,
+        margin: 10,
+            pagination: true,
+          navigation:  false,
+        responsiveClass: true,
+        autoPlay: true,
+        responsive: {
+            0: {
+                items: 1,
                 nav:true
             },
             600:{
@@ -109,7 +109,7 @@ $('#header-slider').owlCarousel({
   // $('.owl-carousel p').removeClass('animated').hide();
   // $('.owl-carousel .boxed-btn').removeClass('animated').hide();
   // })
-  
+
   // owl.on('translated.owl.carousel', function (event) {
   //     $('.owl-carousel h1').addClass('animated fadeInUp').show();
   //     $('.owl-carousel p').addClass('animated fadeInDown').show();
@@ -117,7 +117,9 @@ $('#header-slider').owlCarousel({
   // })
 
   }
-
+  send(name, phone, text) {
+    console.log(name, phone, text);
+  }
 
 
 }
