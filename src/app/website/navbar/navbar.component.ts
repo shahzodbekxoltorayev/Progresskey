@@ -21,6 +21,8 @@ export class NavbarComponent implements OnInit {
       		$('header').removeClass('fixed');
       	}
       });
+      document.addEventListener("touchstart", function(){}, true);
+      
 });
     $('.burger, .overlay').click(function(){
       $('.burger').toggleClass('clicked');
@@ -29,6 +31,7 @@ export class NavbarComponent implements OnInit {
       $('body').toggleClass('overflow');
     });
   }
+ 
 
  
 
