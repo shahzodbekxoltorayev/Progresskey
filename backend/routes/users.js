@@ -116,11 +116,18 @@ router.delete('/:id/:token', async function (request, response, next ){
     var users = await Admin.find();
     var success = false;
     var obj = Admin.verifyOfAdmin(users, token);
-
     if (obj.isAdmin) {
         success = true
             await User.findById(id).then( (res) =>{
                 if(res) {
+                  var image= res.image;
+                  fs.unlink('backend/images/' + image, function (err) {
+                      if (err) {
+                      console.log(err.message);}
+                      else {
+                          console.log('File deleted!');
+                      }
+                  });
                     return res
                 }
                 else {
@@ -149,11 +156,20 @@ router.delete('/:id/:token', async function (request, response, next ){
     }
 })
 // status ni o'zgartirish
+
 router.patch('/:id', async function(request, response) {
     var id = request.params.id;
     let body = {};
-
     User.findById(id).then(res => {
+      var image= res.image;
+      fs.unlink('backend/images/' + image, function (err) {
+          if (err) {
+          console.log(err.message);}
+          else {
+              console.log('File deleted!');
+          }
+      });
+
         body = res;
         body.status = true;
         User.findByIdAndUpdate(id, { $set: body }, { new: true }).then(res => {

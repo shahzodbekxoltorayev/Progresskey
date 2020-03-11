@@ -5,17 +5,14 @@ const router = express.Router();
 
  //                                                               R e g i  s t r a t s i o n
 router.post('/', async function (request, response, next) {
-    console.log("Post Admin");
    var body = request.body;
     let admin = {
         warehouseId: body.warehouseId,
         login : body.login,
         password: await Admin.hashofPassword(body.password),
     }
-    const admin_new = new Admin(admin);
-    console.log(admin_new);
+        const admin_new = new Admin(admin);
         let token = await Admin.generateToken(admin.login, admin.password);
-
         admin_new.save().then( (res) =>{
         response.status(200).json({token: token})
     }).catch( err =>{
@@ -43,7 +40,6 @@ router.get('/:id', async function(request, response) {
     var data = {};
     var success = false;
     var id = request.params.id;
-
     var body = request.body;
     var admins = await Admin.find();
 

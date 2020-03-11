@@ -6,12 +6,13 @@ const productSchema = mongoose.Schema({
     nameEn: {type: String},
     descriptionUz: {type: String},
     descriptionRu: {type: String},
-    descriptionEn: {type: String}, 
+    descriptionEn: {type: String},
     image : {type: String},
     categoryId: {type: String},
-    quantity: {type: Number},  //miqdori 
+    wareHouseId: {type: String},
+    quantity: {type: Number},  //miqdori
     configuration: {type: String},
-    price: {type: Number}, 
+    price: {type: Number},
     rating: {type: Number},
     date: {type: String}
 });

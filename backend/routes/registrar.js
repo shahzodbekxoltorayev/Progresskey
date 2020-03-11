@@ -42,7 +42,6 @@ router.post('/:token',  upload.single('image'), async function (request, respons
 
     var obj = Admin.verifyOfAdmin(admin, token);
 
-
     let registrar = {
         filialId : body.filialId,
         login : body.login,
@@ -123,6 +122,14 @@ router.delete('/:id/:token', async function (request, response, next ){
         success = true
             await Registrar.findById(id).then( (res) =>{
                 if(res) {
+                  var image= res.image;
+                  fs.unlink('backend/images/' + image, function (err) {
+                      if (err) {
+                      console.log(err.message);}
+                      else {
+                          console.log('File deleted!');
+                      }
+                  });
                     return res
                 }
                 else {
@@ -134,7 +141,6 @@ router.delete('/:id/:token', async function (request, response, next ){
                 success = false
                 response.status(400).json({message: "User not found"});
             })
-
                 await Registrar.findByIdAndRemove(id).catch( err => {
                     success = false;
                 })

@@ -47,6 +47,7 @@ router.post('/create/:token', upload.single('image'), async (req, res) =>{
       descriptionEn: body.descriptionEn,
       image : file.filename,
       categoryId: body.categoryId,
+      wareHouseId: body.wareHouseId,
       quantity: body.quantity,
       configuration: body.configuration,
       price: body.price,

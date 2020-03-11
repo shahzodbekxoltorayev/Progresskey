@@ -36,9 +36,9 @@ export class ContactService {
 
   patch(
     id: string,
-    nameUz : string,
-    nameRu : string,
-    nameEn : string
+    nameUz: string,
+    nameRu: string,
+    nameEn: string
   ) {
     const body = {
                   'nameUz ': nameUz,

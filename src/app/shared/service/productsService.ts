@@ -30,6 +30,7 @@ export class ProductService {
     descriptionEn: string,
     image: string,
     categoryId: string,
+    wareHouseId: string,
     quantity: string,  //miqdori
     configuration: string,
     price: string,
@@ -43,6 +44,7 @@ export class ProductService {
     Product.append('descriptionRu', descriptionRu);
     Product.append('descriptionEn', descriptionEn);
     Product.append('categoryId', categoryId);
+    Product.append('wareHouseId', wareHouseId);
     Product.append('image', image);
     Product.append('quantity', quantity);
     Product.append('configuration', configuration);
@@ -71,6 +73,7 @@ export class ProductService {
     descriptionEn: string,
     image: string,
     categoryId: string,
+    wareHouseId: string,
     quantity: string,  //miqdori
     configuration: string,
     price: string,
@@ -85,6 +88,7 @@ export class ProductService {
   Product.append('descriptionRu', descriptionRu);
   Product.append('descriptionEn', descriptionEn);
   Product.append('categoryId', categoryId);
+  Product.append('wareHouseId', wareHouseId);
   Product.append('image', image);
   Product.append('quantity', quantity);
   Product.append('configuration', configuration);

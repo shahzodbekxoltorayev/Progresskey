@@ -96,7 +96,7 @@ router.patch('/:id/:token' , async function(request, response, next) {
         })
     }
 })
- 
+
 
 module.exports = router;
 
