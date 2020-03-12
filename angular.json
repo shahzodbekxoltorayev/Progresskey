@@ -24,11 +24,12 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css",
-              "node_modules/font-awesome/css/font-awesome.css", 
-              "node_modules/bootstrap/dist/css/bootstrap.min.css", 
-              "node_modules/owl.carousel/dist/assets/owl.carousel.min.css", 
-              "node_modules/owl.carousel/dist/assets/owl.theme.green.min.css", 
+              "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
+              "node_modules/owl.carousel/dist/assets/owl.theme.green.min.css",
               "src/assets/css/aos.css",
               "src/assets/css/fonts/icomoon/style.css",
               "src/assets/css/animation.css",
@@ -36,9 +37,9 @@
               "src/assets/css/user.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js", 
+              "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "node_modules/owl.carousel/dist/owl.carousel.min.js", 
+              "node_modules/owl.carousel/dist/owl.carousel.min.js",
               "src/assets/js/jquery-ui.min.js",
               "src/assets/js/aos.js",
               "src/assets/js/main.js"
@@ -105,6 +106,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -136,6 +138,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "progresskey"
 }

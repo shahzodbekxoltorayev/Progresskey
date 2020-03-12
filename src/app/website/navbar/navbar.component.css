@@ -22,7 +22,7 @@
   }
   header{
     overflow: hidden;
-    padding-bottom: 32px;
+    padding-bottom: 45px;
     width: 100%;
     height: auto;
     z-index: 55;
@@ -97,7 +97,7 @@ header .container{
  
 }
 .header-fix span{
-  font-size: 25px; 
+  font-size: 20px; 
   padding:   10px;
 }
 header a{
@@ -440,14 +440,16 @@ header a:hover{
   -webkit-transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
   transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
   width: 40px;
-  height: 40px;
+  height: 40px;  
   border-radius: 20px;
   border: none;
   cursor: pointer;
+  float: right;
   background: #fff;
 }
 .search-box + label .search-icon {
   color: black;
+  float: right;
 }
 .search-box:hover {
   color: white;
@@ -467,11 +469,17 @@ header a:hover{
   cursor: text;
   width: 300px;
   border-radius: auto;
-  background: #ebebeb;
+  background: #fff;
   color: black;
 }
 .search-box:focus + label .search-icon {
   color: black;
+}
+.search-container input{
+  padding-left: 40px;
+}
+.search-lable{
+  float: right;
 }
 .search-box:not(:focus) {
   text-indent: -5000px;
@@ -479,7 +487,7 @@ header a:hover{
 
 #search-submit {
   position: relative;
-  left: -5000px;
+  left: -5050px;
 }
 
 .search-icon {
@@ -487,4 +495,9 @@ header a:hover{
   left: -30px;
   color: white;
   cursor: pointer;
+}
+.glyphicon-search{
+  position: relative;
+  right: -40px;
+  color: #000;
 }
