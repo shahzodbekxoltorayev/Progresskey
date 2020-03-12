@@ -10,29 +10,27 @@ export class UserComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $('#menu-toggle,#menu-overlay').click(function(){
-      $('.user').toggleClass('open-menu');
-    });
+ 
+  
+
+      $('#menuToggle').on('click', function(event) {
+        $('body').toggleClass('open');
+      });
     
-    $('#main-nav li a').click(function(){
-      $('#main-nav li').removeClass('active');
-      $(this).parent().addClass('active')
-    });
+      $('.search-trigger').on('click', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        $('.search-trigger').parent('.header-left').addClass('open');
+      });
     
-    $('#tabs li').click(function(){
-      var clickTarget = $(this).attr('data-target');
-      $('.tab-target').removeClass('targeted');
-      $('#'+clickTarget).addClass("targeted");
-      $('#tabs li').removeClass('active');
-      $(this).addClass('active')
-    });
+      $('.search-close').on('click', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        $('.search-trigger').parent('.header-left').removeClass('open');
+      }); 
+ 
+
     
-    $('#admin-search input').on('focus',function(){
-      $('#header_logo').addClass('hidden');
-    });
-    $('#admin-search input').on('blur',function(){
-      $('#header_logo').removeClass('hidden');
-    });
   }
 
 }
