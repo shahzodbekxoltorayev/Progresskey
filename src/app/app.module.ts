@@ -5,18 +5,9 @@ import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
- 
 
-import {
-  MatSliderModule ,
-  MatInputModule,
-  MatButtonModule ,
-  MatIconModule,
-  MatSelectModule,
-  MatTableModule,
-  MatPaginatorModule,
-  MatSortModule 
-}  from '@angular/material';
+// import {MatInputModule} from '@angular/material';
+import { MatSliderModule } from '@angular/material/slider';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,7 +33,7 @@ import { UserSettingComponent } from './user/user-setting/user-setting.component
 import { UserResultComponent } from './user/user-result/user-result.component';
 import { UserInformationComponent } from './user/user-information/user-information.component';
 import { UserNotesComponent } from './user/user-notes/user-notes.component';
-import { UserHomeComponent } from './user/user-home/user-home.component'; 
+import { UserHomeComponent } from './user/user-home/user-home.component';
 
 @NgModule({
   declarations: [
@@ -69,20 +60,14 @@ import { UserHomeComponent } from './user/user-home/user-home.component';
     UserResultComponent,
     UserInformationComponent,
     UserNotesComponent,
-    UserHomeComponent 
+    UserHomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatSliderModule,
-    MatInputModule,
-    MatButtonModule,
-    MatIconModule,
-    MatSelectModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule, 
     BrowserAnimationsModule,
+    // MatInputModule,
+    MatSliderModule,
     HttpClientModule,
     HttpModule,
     FormsModule
